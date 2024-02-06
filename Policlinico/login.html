@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de inicio de sesión</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilo para el contenedor de la página */
+    .page-container {
+      padding: 80px;
+    }
+
+    /* Estilo para el contenedor del formulario de inicio de sesión */
+    .login-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Estilo para la imagen encima del formulario */
+    .login-image {
+      max-width: 140%;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 100px;
+      z-index: 0;
+    }
+
+    /* Estilo para el contenedor del carrusel de imágenes en el lado izquierdo */
+    #carouselExampleControls {
+      width: 100%; /* Ancho del carrusel al 100% del contenedor izquierdo */
+    }
+  </style>
+</head>
+<body>
+  <center><img src="images/miespe.jpg" width="600" height="200"></center>
+  <div class="container page-container">
+    <div class="row justify-content-center">
+      <!-- Contenedor izquierdo para las imágenes interactivas -->
+      <div class="col-md-6">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/espe.jpg" width="100%" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+              <img src="images/espe1.jpg" width="100%" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+              <img src="images/espe2.jpg" width="100%" alt="Imagen 3">
+            </div>
+            <div class="carousel-item">
+              <img src="images/espe3.jpg" width="100%" alt="Imagen 3">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contenedor derecho para el formulario de inicio de sesión -->
+      
+      <div class="col-md-6 login-container">
+       
+        <!-- Formulario de inicio de sesión -->
+        <form action="php/login.php" method="POST">
+            <!-- Campo de entrada para el nombre de usuario -->
+            <div class="form-group">
+              <h3>USUARIO</h3>
+                <input type="text" class="form-control" name="nombre_usuario" placeholder="Nombre de usuario" required>
+            </div>
+            <!-- Campo de entrada para la contraseña -->
+            <div class="form-group">
+              <h3>CONTRASEÑA</h3>
+                <input type="password" class="form-control" name="contrasena" placeholder="Contraseña" required>
+            </div>
+            <!-- Botón para enviar el formulario -->
+            <button type="submit" class="btn btn-primary" name="login">INGRESAR</button>
+        </form>
+        <!-- Enlace para redirigir al formulario de registro -->
+        <p class="mt-4">¿Registre su usuario si no lo tiene? <a href="registro.html">Regístrate aquí</a></p>
+    </div>
+    
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

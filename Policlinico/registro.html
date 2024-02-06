@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de registro</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <center><h1 class="mt-4 mb-4">Agendación De Citas Médicas</h1></center>
+  <center><img src="images/miespe.jpg"></center>
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <!-- Formulario de registro -->
+        <form action="php/registro.php" method="POST">
+          <h2 class="mt-5 mb-4">Regístrate</h2>
+          <!-- Campo de entrada para el nombre de usuario -->
+          <div class="form-group">
+            <input type="text" class="form-control" name="nombre_usuario" placeholder="Nombre de usuario" required>
+          </div>
+          <!-- Campo de entrada para la contraseña -->
+          <div class="form-group">
+            <input type="password" class="form-control" name="contrasena" placeholder="Contraseña" required>
+          </div>
+		  <!-- Campo de entrada para el correo -->
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Correo" required>
+          </div>
+          <!-- Botón para enviar el formulario de registro -->
+          <button type="submit" class="btn btn-primary" name="registro">Registrarse</button>
+        </form>
+        <!-- Enlace para redirigir al formulario de inicio de sesión -->
+        <p class="mt-3">¿Ya tienes un usuario? <a href="login.html">Inicia sesión aquí</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
